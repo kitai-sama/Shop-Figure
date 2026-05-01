@@ -1,0 +1,379 @@
+/* ------------------------------------------------------- */
+   /* RESET & BASE */
+/* ------------------------------------------------------- */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+ 
+:root {
+    --yellow: #f5c400;
+    --yellow-dark: #e0b000;
+    --white: #ffffff;
+    --text-dark: #222;
+    --text-light: #555;
+    --orange: #e67e00;
+    --header-top-h: 60px;
+    --header-nav-h: 44px;
+    --max-w: 1280px;
+    --pad: 20px;
+}
+ 
+/* ------------------------------------------------------- */
+   /* HEADER WRAPPER — 2 TẦNG */
+/* ------------------------------------------------------- */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+ 
+/* ── Tầng 1: Logo + Search + Hotline + Icons ── */
+.header-top {
+    background: #fff;
+    height: var(--header-top-h);
+}
+ 
+.header-top-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--pad);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+ 
+/* ── Tầng 2: Navigation bar (vàng) ── */
+.header-nav {
+    background: var(--yellow);
+    height: var(--header-nav-h);
+    border-top: 1px solid rgba(0,0,0,0.08);
+}
+ 
+.header-nav-inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 var(--pad);
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+ 
+/* ------------------------------------------------------- */
+   /* LOGO */
+/* ------------------------------------------------------- */
+.logo-container {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+}
+ 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.logo img {
+    height: 42px;
+    width: 42px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+}
+ 
+.logo-text {
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: var(--text-dark);
+}
+ 
+/* ------------------------------------------------------- */
+   /* SEARCH BAR */
+/* ------------------------------------------------------- */
+.search-container {
+    flex: 1;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #ddd;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #f7f7f7;
+    transition: border-color 0.2s;
+}
+ 
+.search-container:focus-within {
+    border-color: var(--yellow);
+    background: #fff;
+}
+ 
+.search {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+ 
+.search::placeholder {
+    color: #aaa;
+}
+ 
+.search-btn {
+    border: none;
+    background: var(--yellow);
+    padding: 0 16px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+ 
+.search-btn:hover {
+    background: var(--yellow-dark);
+}
+ 
+.search-btn i {
+    color: #333;
+    font-size: 15px;
+}
+ 
+/* ------------------------------------------------------- */
+   /* HOTLINE BLOCK  */
+/* ------------------------------------------------------- */
+.hotline-group {
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+}
+ 
+.hotline-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--text-dark);
+}
+ 
+.hotline-item i {
+    color: var(--yellow-dark);
+    font-size: 20px;
+}
+ 
+.hotline-item strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+}
+ 
+.hotline-item a{
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.hotline-item a:hover {
+    color: var(--orange);
+}
+/* ------------------------------------------------------- */
+   /* USER + CART ICONS */
+/* ------------------------------------------------------- */
+.user-ShoppingCart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+ 
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 18px;
+    color: var(--text-dark);
+    transition: background 0.15s, color 0.15s;
+    position: relative;
+}
+ 
+.icon-btn:hover {
+    background: rgba(0,0,0,0.06);
+    color: var(--orange);
+}
+ 
+/* ------------------------------------------------------- */
+   /* NAV MENU (tầng vàng) */
+/* ------------------------------------------------------- */
+nav {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+ 
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+ 
+/* ── Top-level item ── */
+.menu > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+ 
+.menu > li > a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0 14px;
+    height: 100%;
+    color: #fff;           
+    font-size: 13.5px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+}
+ 
+.menu > li > a i,
+.menu > li > .arrow {
+    font-size: 10px;
+    color: #fff;
+    margin-left: 2px;
+    transition: transform 0.2s, color 0.15s;
+}
+ 
+/* Hover top-level */
+.menu > li:hover > a {
+    background: rgba(0,0,0,0.12);
+    color: #fff;
+}
+ 
+.menu > li:hover > a i,
+.menu > li:hover > .arrow {
+    transform: rotate(180deg);
+}
+ 
+/* ── SUBMENU CẤP 1 ── */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    list-style: none;
+    min-width: 210px;
+    border-top: 2px solid var(--yellow);
+    border: 1px solid #e0e0e0;
+    border-top: 2px solid var(--yellow);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    z-index: 999;
+}
+ 
+.menu > li:hover > .submenu {
+    display: block;
+}
+ 
+.submenu li {
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+}
+ 
+.submenu li:last-child {
+    border-bottom: none;
+}
+ 
+.submenu li > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    color: var(--text-dark);
+    font-size: 13px;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+    white-space: nowrap;
+}
+ 
+.submenu li > a:hover,
+.submenu li:hover > a {
+    background: #fff8e0;
+    color: var(--orange);
+}
+  
+.submenu li i,
+.submenu li .sub-arrow {
+    font-size: 10px;
+    color: #aaa;
+    flex-shrink: 0;
+}
+ 
+/* ── SUBMENU CẤP 2 (bên phải) ── */
+.submenu-right {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #fff;
+    list-style: none;
+    min-width: 200px;
+    border: 1px solid #e0e0e0;
+    border-top: 2px solid var(--yellow);
+    box-shadow: 4px 6px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+ 
+.has-sub:hover > .submenu-right {
+    display: block;
+}
+ 
+.submenu-right li {
+    border-bottom: 1px solid #f0f0f0;
+}
+ 
+.submenu-right li:last-child {
+    border-bottom: none;
+}
+ 
+.submenu-right li > a {
+    display: block;
+    padding: 10px 14px;
+    color: var(--text-dark);
+    font-size: 13px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+}
+ 
+.submenu-right li > a:hover {
+    background: #fff8e0;
+    color: var(--orange);
+}
+ 
+/* ── has-sub: item có mũi tên ► ── */
+.has-sub > a {
+    justify-content: space-between;
+}
+ 
+/* ------------------------------------------------------- */
