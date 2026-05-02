@@ -208,14 +208,52 @@
     border-radius: 6px;
     font-size: 18px;
     color: var(--text-dark);
-    transition: background 0.15s, color 0.15s;
-    position: relative;
 }
 
 .icon-btn:hover {
-    background: rgba(0, 0, 0, 0.06);
     color: var(--orange);
 }
+
+/* dropdown */
+.dropdown-user {
+    position: relative;
+}
+
+/* menu */
+.dropdown-menu {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 160px;
+    background: #eee; 
+    border-radius: 10px;
+    border: 1px solid var(--yellow);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* item */
+.dropdown-menu a {
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.dropdown-menu a:hover {
+    /* background: #ddd; */
+    color: var(--orange);
+}
+
+/* hiện menu */
+.dropdown-menu.show {
+    display: flex;
+}
+
 
 /* ------------------------------------------------------- */
 /* NAV MENU (tầng vàng) */

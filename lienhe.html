@@ -65,12 +65,23 @@
 
                 <!-- User + Cart -->
                 <div class="user-ShoppingCart">
-                    <button class="icon-btn" onclick="window.location.href='login.html'">
-                        <i class="fas fa-user"></i>
-                    </button>
-                    <button class="icon-btn cart-btn" aria-label="Giỏ hàng">
+
+                    <div class="dropdown-user">
+                        <button class="icon-btn" id="btn-user">
+                            <i class="fas fa-user"></i>
+                        </button>
+                
+                        <div class="dropdown-menu" id="user-menu">
+                            <a href="login.html">Đăng Nhập</a>
+                            <a href="register.html">Đăng Ký</a>
+                        </div>
+                    </div>
+                
+                    <button class="icon-btn cart-btn" aria-label="Giỏ hàng"
+                        onclick="window.location.href='Shoppingcart.html'">
                         <i class="fas fa-shopping-cart"></i>
                     </button>
+                
                 </div>
 
             </div>
@@ -206,37 +217,41 @@
     <main>
         <section class="contact-section">
             <div class="contact-container">
-        
+
                 <h2 class="contact-title">Liên hệ</h2>
-        
+
                 <!-- MAP -->
                 <div class="contact-maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.922440727008!2d106.6769549!3d10.7374723!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1777732367728!5m2!1svi!2s" 
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.981513310963!2d106.67948690531009!3d10.735195438324837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f696de5fbc5%3A0xb94cb1d7bd5d881d!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIELDoWNoIGtob2EgTmFtIFPDoGkgR8Oybg!5e0!3m2!1svi!2s!4v1777732423585!5m2!1svi!2s"
-                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.922440727008!2d106.6769549!3d10.7374723!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1777732367728!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7839.981513310963!2d106.67948690531009!3d10.735195438324837!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f696de5fbc5%3A0xb94cb1d7bd5d881d!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIELDoWNoIGtob2EgTmFtIFPDoGkgR8Oybg!5e0!3m2!1svi!2s!4v1777732423585!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-        
+
                 <!-- INFO -->
                 <div class="contact-info">
                     <p><strong>Cơ sở 1:</strong> 180 Cao Lỗ, Phường, Chánh Hưng, Hồ Chí Minh 700000, Việt Nam</p>
                     <p><strong>Hotline:</strong> 0345.365.205</p>
-        
+
                     <p><strong>Cơ sở 2:</strong> 47 Cao Lỗ, Chánh Hưng, Hồ Chí Minh 790000, Việt Nam</p>
                     <p><strong>Hotline:</strong> 0758.8149.205 </p>
-        
+
                     <p><strong>Email:</strong> KFigures@gmail.com</p>
                 </div>
-        
+
                 <!-- FORM -->
                 <form class="contact-form">
                     <input type="text" placeholder="Họ tên *" required>
                     <input type="email" placeholder="Email *" required>
                     <textarea placeholder="Lời nhắn"></textarea>
-        
+
                     <p class="note">* Thông tin bắt buộc</p>
-        
+
                     <button type="submit">Gửi liên hệ</button>
                 </form>
             </div>
@@ -357,6 +372,29 @@
 
     </footer>
 
+
+
+
+    <script>
+        const btnUser = document.getElementById("btn-user");
+        const menuUser = document.getElementById("user-menu");
+
+        // click vào icon
+        btnUser.addEventListener("click", function (e) {
+            e.stopPropagation(); // tránh bị đóng ngay
+            menuUser.classList.toggle("show");
+        });
+
+        // click ra ngoài -> đóng menu
+        document.addEventListener("click", function () {
+            menuUser.classList.remove("show");
+        });
+
+        // click trong menu không bị đóng
+        menuUser.addEventListener("click", function (e) {
+            e.stopPropagation();
+        });
+    </script>
 </body>
 
 </html>
