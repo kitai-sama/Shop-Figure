@@ -12,184 +12,297 @@
 
 <body>
 
-<!----------------------------------------------------------->
-     <!-- HEADER -->
-<!----------------------------------------------------------->
-<header class="header">
- 
-    <!-- TẦNG 1: Logo + Search + Hotline + Icons -->
-    <div class="header-top">
-        <div class="header-top-inner">
- 
-            <!-- Logo -->
-            <div class="logo-container">
-                <a href="index.html" class="logo">
-                    <img src="./images/khăn đỏ chibi.jpg" alt="K-Logo">
-                    <span class="logo-text">M FIGURE</span>
-                </a>
-            </div>
- 
-            <!-- Search -->
-            <div class="search-container">
-                <input type="text" class="search" placeholder="Từ khoá...">
-                <button class="search-btn">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
- 
-            <!-- Hotline -->
-            <div class="hotline-group">
-                <div class="hotline-item">
-                    <i class="fa-solid fa-headset"></i>
-                    <div>
-                        <span>Hotline CS1:</span>
-                        <strong>0345.365.205</strong>
-                    </div>
-                </div>
-                <div class="hotline-item">
-                    <i class="fa-solid fa-headset"></i>
-                    <div>
-                        <span>Hotline CS2:</span>
-                        <strong>0758.8149.205</strong>
-                    </div>
-                </div>
-                <div class="hotline-item">
-                    <i class="fa-solid fa-store"></i>
-                    <div>
-                        <span><strong><a href="#">Hệ Thống Cửa Hàng</a></strong></span>                     
-                    </div>
-                </div>
-            </div>
- 
-            <!-- User + Cart -->
-            <div class="user-ShoppingCart">
-                <button class="icon-btn" onclick="window.location.href='login.html'">
-                    <i class="fas fa-user"></i>
-                </button>
-                <button class="icon-btn cart-btn" aria-label="Giỏ hàng">
-                    <i class="fas fa-shopping-cart"></i>
-                </button>
-            </div>
- 
-        </div>
-    </div>
- 
-    <!-- TẦNG 2: Navigation Menu (nền vàng) -->
-    <div class="header-nav">
-        <div class="header-nav-inner">
-            <nav>
-                <ul class="menu">
- 
-                    <li><a href="index.html">Trang Chủ</a></li>
- 
-                    <li>
-                        <a href="#">Mô Hình / Figure <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li class="has-sub">
-                                <a href="#">Mô Hình PVC <i class="fa-solid fa-chevron-right"></i></a>
-                                <ul class="submenu-right">
-                                    <li><a href="#">GamePrize Figure</a></li>
-                                    <li><a href="#">Scale Figure</a></li>
-                                    <li><a href="#">Nendoroid</a></li>
-                                    <li><a href="#">Pop Up Parade</a></li>
-                                    <li><a href="#">Figma</a></li>
-                                    <li><a href="#">NSFW</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Mô Hình Resin</a></li>
-                            <li class="has-sub">
-                                <a href="#">Hàng Đặt Trước <i class="fa-solid fa-chevron-right"></i></a>
-                                <ul class="submenu-right">
-                                    <li><a href="#">Phát Hành 2025</a></li>
-                                    <li><a href="#">Phát Hành 2026</a></li>
-                                    <li><a href="#">Phát Hành 2027</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-sub">
-                                <a href="#">Hãng Sản Xuất <i class="fa-solid fa-chevron-right"></i></a>
-                                <ul class="submenu-right">
-                                    <li><a href="#">Good Smile Company</a></li>
-                                    <li><a href="#">BANDAI</a></li>
-                                    <li><a href="#">Taito</a></li>
-                                    <li><a href="#">Furyu</a></li>
-                                    <li><a href="#">SEGA</a></li>
-                                    <li><a href="#">Apex Innovations</a></li>
-                                    <li><a href="#">BearPanda</a></li>
-                                    <li><a href="#">Animester</a></li>
-                                    <li><a href="#">ALTER</a></li>
-                                    <li><a href="#">BINDing</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Sản Phẩm Nổi Bật</a></li>
-                        </ul>
-                    </li>
- 
-                    <li>
-                        <a href="#">Sản Phẩm Khác <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li class="has-sub">
-                                <a href="#">Trading Card <i class="fa-solid fa-chevron-right"></i></a>
-                                <ul class="submenu-right">
-                                    <li><a href="#">Bandai</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-sub">
-                                <a href="#">Tủ / Hộp Trưng Bày <i class="fa-solid fa-chevron-right"></i></a>
-                                <ul class="submenu-right">
-                                    <li><a href="#">Hộp Mika</a></li>
-                                    <li><a href="#">Tủ Gỗ / Kính</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Plushy / Goods</a></li>
-                        </ul>
-                    </li>
- 
-                    <li>
-                        <a href="#">Khuyến Mãi <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Flash Sale!!!</a></li>
-                            <li><a href="#">Mã Giảm Giá</a></li>
-                        </ul>
-                    </li>
- 
-                    <li>
-                        <a href="#">Hướng Dẫn <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
-                            <li><a href="#">Hướng Dẫn Tra Cứu Đơn</a></li>
-                            <li><a href="#">Hướng Dẫn Tính Giá Order</a></li>
-                            <li><a href="#">Câu Hỏi Thường Gặp</a></li>
-                        </ul>
-                    </li>
- 
-                    <li>
-                        <a href="#">Tin Tức <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Tin Tức</a></li>
-                            <li><a href="#">Cập Nhật Hàng Về</a></li>
-                            <li><a href="#">Review Sản Phẩm</a></li>
-                        </ul>
-                    </li>
- 
-                    <li><a href="#">Liên Hệ</a></li>
- 
-                    <li>
-                        <a href="#">Khác <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="submenu">
-                            <li><a href="#">Tính Giá Order</a></li>
-                            <li><a href="#">Tra Cứu Đơn Hàng</a></li>
-                        </ul>
-                    </li>
- 
-                </ul>
-            </nav>
-        </div>
-    </div>
- 
-</header>
- 
+    <!----------------------------------------------------------->
+    <!-- HEADER -->
+    <!----------------------------------------------------------->
+    <header class="header">
 
-<h1>ou bhawpoi joijng lanekg9 8ho;rn sdfj</h1>
+        <!-- TẦNG 1: Logo + Search + Hotline + Icons -->
+        <div class="header-top">
+            <div class="header-top-inner">
+
+                <!-- Logo -->
+                <div class="logo-container">
+                    <a href="index.html" class="logo">
+                        <img src="./images/khăn đỏ chibi.jpg" alt="K-Logo">
+                        <span class="logo-text">K-FIGURE</span>
+                    </a>
+                </div>
+
+                <!-- Search -->
+                <div class="search-container">
+                    <input type="text" class="search" placeholder="Từ khoá...">
+                    <button class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- Hotline -->
+                <div class="hotline-group">
+                    <div class="hotline-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <span>Hotline CS1:</span>
+                            <strong>0345.365.205</strong>
+                        </div>
+                    </div>
+                    <div class="hotline-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <div>
+                            <span>Hotline CS2:</span>
+                            <strong>0758.8149.205</strong>
+                        </div>
+                    </div>
+                    <div class="hotline-item">
+                        <i class="fa-solid fa-store"></i>
+                        <div>
+                            <span><strong><a href="lienhe.html">Hệ Thống Cửa Hàng</a></strong></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User + Cart -->
+                <div class="user-ShoppingCart">
+                    <button class="icon-btn" onclick="window.location.href='login.html'">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <button class="icon-btn cart-btn" aria-label="Giỏ hàng">
+                        <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TẦNG 2: Navigation Menu (nền vàng) -->
+        <div class="header-nav">
+            <div class="header-nav-inner">
+                <nav>
+                    <ul class="menu">
+
+                        <li><a href="index.html">Trang Chủ</a></li>
+
+                        <li>
+                            <a href="#">Mô Hình / Figure <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li class="has-sub">
+                                    <a href="#">Mô Hình PVC <i class="fa-solid fa-chevron-right"></i></a>
+                                    <ul class="submenu-right">
+                                        <li><a href="#">GamePrize Figure</a></li>
+                                        <li><a href="#">Scale Figure</a></li>
+                                        <li><a href="#">Nendoroid</a></li>
+                                        <li><a href="#">Pop Up Parade</a></li>
+                                        <li><a href="#">Figma</a></li>
+                                        <li><a href="#">NSFW</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Mô Hình Resin</a></li>
+                                <li class="has-sub">
+                                    <a href="#">Hàng Đặt Trước <i class="fa-solid fa-chevron-right"></i></a>
+                                    <ul class="submenu-right">
+                                        <li><a href="#">Phát Hành 2025</a></li>
+                                        <li><a href="#">Phát Hành 2026</a></li>
+                                        <li><a href="#">Phát Hành 2027</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="#">Hãng Sản Xuất <i class="fa-solid fa-chevron-right"></i></a>
+                                    <ul class="submenu-right">
+                                        <li><a href="#">Good Smile Company</a></li>
+                                        <li><a href="#">BANDAI</a></li>
+                                        <li><a href="#">Taito</a></li>
+                                        <li><a href="#">Furyu</a></li>
+                                        <li><a href="#">SEGA</a></li>
+                                        <li><a href="#">Apex Innovations</a></li>
+                                        <li><a href="#">BearPanda</a></li>
+                                        <li><a href="#">Animester</a></li>
+                                        <li><a href="#">ALTER</a></li>
+                                        <li><a href="#">BINDing</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Sản Phẩm Nổi Bật</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Sản Phẩm Khác <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li class="has-sub">
+                                    <a href="#">Trading Card <i class="fa-solid fa-chevron-right"></i></a>
+                                    <ul class="submenu-right">
+                                        <li><a href="#">Bandai</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-sub">
+                                    <a href="#">Tủ / Hộp Trưng Bày <i class="fa-solid fa-chevron-right"></i></a>
+                                    <ul class="submenu-right">
+                                        <li><a href="#">Hộp Mika</a></li>
+                                        <li><a href="#">Tủ Gỗ / Kính</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Plushy / Goods</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Khuyến Mãi <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Flash Sale!!!</a></li>
+                                <li><a href="#">Mã Giảm Giá</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Hướng Dẫn <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                                <li><a href="#">Hướng Dẫn Tra Cứu Đơn</a></li>
+                                <li><a href="#">Hướng Dẫn Tính Giá Order</a></li>
+                                <li><a href="#">Câu Hỏi Thường Gặp</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="#">Tin Tức <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Tin Tức</a></li>
+                                <li><a href="#">Cập Nhật Hàng Về</a></li>
+                                <li><a href="#">Review Sản Phẩm</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="lienhe.html">Liên Hệ</a></li>
+
+                        <li>
+                            <a href="#">Khác <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#">Tính Giá Order</a></li>
+                                <li><a href="#">Tra Cứu Đơn Hàng</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!------------------------------------------------------------>
+    <!-- FOOTER -->
+    <!------------------------------------------------------------>
+    <footer>
+
+        <!-- HÀNG 1: 4 cột link -->
+        <div class="footer-main">
+
+            <div class="footer-col">
+                <h4>Giới thiệu về K-Figure</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Liên hệ hợp tác</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Tin tuyển dụng</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Hỗ trợ khách hàng</h4>
+                <ul>
+                    <li><a href="#">Tra cứu đơn hàng</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng trực tuyến</a></li>
+                    <li><a href="#">Hướng dẫn thanh toán</a></li>
+                    <li><a href="#">Bảng tính giá Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Chính sách</h4>
+                <ul>
+                    <li><a href="#">Quy định chung</a></li>
+                    <li><a href="#">Phân định trách nhiệm</a></li>
+                    <li><a href="#">Chính sách vận chuyển</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Chính sách kiểm hàng</a></li>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Chính sách thanh toán</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Thông tin khuyến mãi</h4>
+                <ul>
+                    <li><a href="#">Thông tin khuyến mại</a></li>
+                    <li><a href="#">Sản phẩm khuyến mại</a></li>
+                    <li><a href="#">Sản phẩm mới</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="footer-KeNgang">
+
+        <!-- HÀNG 2: Liên hệ + Mạng xã hội + Hộ kinh doanh -->
+        <div class="footer-bottom">
+
+            <div class="footer-contact">
+                <h4>Thông tin liên hệ</h4>
+                <p><strong>CƠ SỞ 1:</strong> Số 100 An Trạch - Ô Chợ Dừa - Đống Đa - Hà Nội</p>
+                <p><strong>CƠ SỞ 2:</strong> Số 392 Nguyễn Trãi - Hà Đông - Hà Nội</p>
+                <p>Email: <a href="mailto:mfigure.vn@gmail.com">mfigure.vn@gmail.com</a></p>
+                <p><strong>Hotline 1:</strong> 0345.365.205</p>
+                <p><strong>Hotline 2:</strong> 0758.8149.205</p>
+            </div>
+
+            <div class="footer-social">
+                <h4>Kết nối với chúng tôi</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/kitai.shinkokuna" class="facebook" aria-label="Facebook"> <i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/Kibishikitai" class="twitter" aria-label="Twitter"> <i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.instagram.com/kitai001/" class="instagram" aria-label="Instagram"> <i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@kibishikitai" class="youtube" aria-label="YouTube"> <i class="fab fa-youtube"></i></a>
+                    <a href="https://shopee.sg/user/account/profile" class="shopee" aria-label="Shopee"> <i class="fas fa-store"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-business">
+                <div class="footer-business-inner">
+                    <img src="./images/khăn đỏ chibi.jpg" alt="M Figure Logo" class="footer-business-logo">
+                    <div class="footer-business-info">
+                        <h4>HỘ KINH DOANH M FIGURE</h4>
+                        <ul>
+                            <li>GIẤY CHỨNG NHẬN ĐĂNG KÝ HỘ KINH DOANH<br>Số 01K8035445 cấp ngày 18/10/2024<br>Tại UBND
+                                QUẬN NAM TỪ LIÊM</li>
+                            <li>MST: 8717131113</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-certified">
+                    <img src="./images/Thông Báo bộ.jpg"
+                        alt="Đã thông báo Bộ Công Thương">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-copyright">
+            Bản quyền thuộc về K-Figure (Nhái (")>)
+        </div>
+
+    </footer>
+
 
 </body>
 

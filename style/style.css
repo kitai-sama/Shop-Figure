@@ -1,13 +1,13 @@
 /* ------------------------------------------------------- */
-   /* RESET & BASE */
+/* RESET & BASE */
 /* ------------------------------------------------------- */
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Arial, sans-serif;
 }
- 
+
 :root {
     --yellow: #f5c400;
     --yellow-dark: #e0b000;
@@ -20,23 +20,23 @@
     --max-w: 1280px;
     --pad: 20px;
 }
- 
+
 /* ------------------------------------------------------- */
-   /* HEADER WRAPPER — 2 TẦNG */
+/* HEADER WRAPPER — 2 TẦNG */
 /* ------------------------------------------------------- */
 .header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
- 
+
 /* ── Tầng 1: Logo + Search + Hotline + Icons ── */
 .header-top {
     background: #fff;
     height: var(--header-top-h);
 }
- 
+
 .header-top-inner {
     max-width: var(--max-w);
     margin: 0 auto;
@@ -46,14 +46,14 @@
     align-items: center;
     gap: 20px;
 }
- 
+
 /* ── Tầng 2: Navigation bar (vàng) ── */
 .header-nav {
     background: var(--yellow);
     height: var(--header-nav-h);
-    border-top: 1px solid rgba(0,0,0,0.08);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
- 
+
 .header-nav-inner {
     max-width: var(--max-w);
     margin: 0 auto;
@@ -62,16 +62,16 @@
     display: flex;
     align-items: stretch;
 }
- 
+
 /* ------------------------------------------------------- */
-   /* LOGO */
+/* LOGO */
 /* ------------------------------------------------------- */
 .logo-container {
     flex-shrink: 0;
     display: flex;
     align-items: center;
 }
- 
+
 .logo {
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@
     text-decoration: none;
     color: inherit;
 }
- 
+
 .logo img {
     height: 42px;
     width: 42px;
@@ -87,7 +87,7 @@
     border-radius: 50%;
     border: 2px solid var(--yellow);
 }
- 
+
 .logo-text {
     font-size: 1.2rem;
     font-weight: 900;
@@ -95,9 +95,9 @@
     letter-spacing: 1px;
     color: var(--text-dark);
 }
- 
+
 /* ------------------------------------------------------- */
-   /* SEARCH BAR */
+/* SEARCH BAR */
 /* ------------------------------------------------------- */
 .search-container {
     flex: 1;
@@ -110,12 +110,12 @@
     background: #f7f7f7;
     transition: border-color 0.2s;
 }
- 
+
 .search-container:focus-within {
     border-color: var(--yellow);
     background: #fff;
 }
- 
+
 .search {
     flex: 1;
     border: none;
@@ -125,11 +125,11 @@
     font-size: 14px;
     color: var(--text-dark);
 }
- 
+
 .search::placeholder {
     color: #aaa;
 }
- 
+
 .search-btn {
     border: none;
     background: var(--yellow);
@@ -141,25 +141,25 @@
     justify-content: center;
     transition: background 0.2s;
 }
- 
+
 .search-btn:hover {
     background: var(--yellow-dark);
 }
- 
+
 .search-btn i {
     color: #333;
     font-size: 15px;
 }
- 
+
 /* ------------------------------------------------------- */
-   /* HOTLINE BLOCK  */
+/* HOTLINE BLOCK  */
 /* ------------------------------------------------------- */
 .hotline-group {
     display: flex;
     gap: 20px;
     flex-shrink: 0;
 }
- 
+
 .hotline-item {
     display: flex;
     align-items: center;
@@ -167,19 +167,19 @@
     font-size: 13px;
     color: var(--text-dark);
 }
- 
+
 .hotline-item i {
     color: var(--yellow-dark);
     font-size: 20px;
 }
- 
+
 .hotline-item strong {
     display: block;
     font-size: 14px;
     font-weight: 700;
 }
- 
-.hotline-item a{
+
+.hotline-item a {
     color: var(--text-dark);
     text-decoration: none;
     transition: color 0.15s;
@@ -188,8 +188,9 @@
 .hotline-item a:hover {
     color: var(--orange);
 }
+
 /* ------------------------------------------------------- */
-   /* USER + CART ICONS */
+/* USER + CART ICONS */
 /* ------------------------------------------------------- */
 .user-ShoppingCart {
     display: flex;
@@ -198,7 +199,7 @@
     flex-shrink: 0;
     margin-left: auto;
 }
- 
+
 .icon-btn {
     background: none;
     border: none;
@@ -210,21 +211,21 @@
     transition: background 0.15s, color 0.15s;
     position: relative;
 }
- 
+
 .icon-btn:hover {
-    background: rgba(0,0,0,0.06);
+    background: rgba(0, 0, 0, 0.06);
     color: var(--orange);
 }
- 
+
 /* ------------------------------------------------------- */
-   /* NAV MENU (tầng vàng) */
+/* NAV MENU (tầng vàng) */
 /* ------------------------------------------------------- */
 nav {
     display: flex;
     align-items: stretch;
     width: 100%;
 }
- 
+
 .menu {
     list-style: none;
     display: flex;
@@ -234,47 +235,47 @@ nav {
     margin: 0;
     width: 100%;
 }
- 
+
 /* ── Top-level item ── */
-.menu > li {
+.menu>li {
     position: relative;
     display: flex;
     align-items: center;
 }
- 
-.menu > li > a {
+
+.menu>li>a {
     display: flex;
     align-items: center;
     gap: 4px;
     padding: 0 14px;
     height: 100%;
-    color: #fff;           
+    color: #fff;
     font-size: 13.5px;
     font-weight: 600;
     text-decoration: none;
     white-space: nowrap;
     transition: background 0.15s, color 0.15s;
 }
- 
-.menu > li > a i,
-.menu > li > .arrow {
+
+.menu>li>a i,
+.menu>li>.arrow {
     font-size: 10px;
     color: #fff;
     margin-left: 2px;
     transition: transform 0.2s, color 0.15s;
 }
- 
+
 /* Hover top-level */
-.menu > li:hover > a {
-    background: rgba(0,0,0,0.12);
+.menu>li:hover>a {
+    background: rgba(0, 0, 0, 0.12);
     color: #fff;
 }
- 
-.menu > li:hover > a i,
-.menu > li:hover > .arrow {
+
+.menu>li:hover>a i,
+.menu>li:hover>.arrow {
     transform: rotate(180deg);
 }
- 
+
 /* ── SUBMENU CẤP 1 ── */
 .submenu {
     display: none;
@@ -287,24 +288,24 @@ nav {
     border-top: 2px solid var(--yellow);
     border: 1px solid #e0e0e0;
     border-top: 2px solid var(--yellow);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     z-index: 999;
 }
- 
-.menu > li:hover > .submenu {
+
+.menu>li:hover>.submenu {
     display: block;
 }
- 
+
 .submenu li {
     position: relative;
     border-bottom: 1px solid #f0f0f0;
 }
- 
+
 .submenu li:last-child {
     border-bottom: none;
 }
- 
-.submenu li > a {
+
+.submenu li>a {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -315,20 +316,20 @@ nav {
     transition: background 0.15s, color 0.15s;
     white-space: nowrap;
 }
- 
-.submenu li > a:hover,
-.submenu li:hover > a {
+
+.submenu li>a:hover,
+.submenu li:hover>a {
     background: #fff8e0;
     color: var(--orange);
 }
-  
+
 .submenu li i,
 .submenu li .sub-arrow {
     font-size: 10px;
     color: #aaa;
     flex-shrink: 0;
 }
- 
+
 /* ── SUBMENU CẤP 2 (bên phải) ── */
 .submenu-right {
     display: none;
@@ -340,23 +341,23 @@ nav {
     min-width: 200px;
     border: 1px solid #e0e0e0;
     border-top: 2px solid var(--yellow);
-    box-shadow: 4px 6px 20px rgba(0,0,0,0.1);
+    box-shadow: 4px 6px 20px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
- 
-.has-sub:hover > .submenu-right {
+
+.has-sub:hover>.submenu-right {
     display: block;
 }
- 
+
 .submenu-right li {
     border-bottom: 1px solid #f0f0f0;
 }
- 
+
 .submenu-right li:last-child {
     border-bottom: none;
 }
- 
-.submenu-right li > a {
+
+.submenu-right li>a {
     display: block;
     padding: 10px 14px;
     color: var(--text-dark);
@@ -365,15 +366,317 @@ nav {
     white-space: nowrap;
     transition: background 0.15s, color 0.15s;
 }
- 
-.submenu-right li > a:hover {
+
+.submenu-right li>a:hover {
     background: #fff8e0;
     color: var(--orange);
 }
- 
+
 /* ── has-sub: item có mũi tên ► ── */
-.has-sub > a {
+.has-sub>a {
     justify-content: space-between;
 }
- 
+
 /* ------------------------------------------------------- */
+/* FOOTER */
+/* ------------------------------------------------------- */
+footer {
+    background: #f9f9f9;
+    border-top: 3px solid var(--yellow);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #333;
+    font-size: 13.5px;
+}
+
+/* ── Khu vực links chính (4 cột) ── */
+.footer-main {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 40px var(--pad) 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-col h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 14px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.footer-col ul li a {
+    color: #444;
+    text-decoration: none;
+    transition: color 0.15s;
+    font-size: 13.5px;
+}
+
+.footer-col ul li a:hover {
+    color: var(--orange);
+}
+
+/* ── Divider ── */
+.footer-keNgang {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* ── Khu vực dưới (thông tin liên hệ + mạng xã hội + đăng ký) ── */
+.footer-bottom {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 30px var(--pad) 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* Thông tin liên hệ */
+.footer-contact h4,
+.footer-social h4,
+.footer-business h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 12px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 13.5px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.footer-contact strong {
+    color: #111;
+}
+
+.footer-contact a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Mạng xã hội */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+    color: #fff;
+}
+
+.social-icons a:hover {
+    transform: scale(1.12);
+    opacity: 0.88;
+}
+
+.social-icons a.facebook {
+    background: #1877f2;
+}
+
+.social-icons a.twitter {
+    background: #1da1f2;
+}
+
+.social-icons a.instagram {
+    background: radial-gradient(circle at 30% 107%,
+            #fdf497 0%, #fdf497 5%,
+            #fd5949 45%, #d6249f 60%,
+            #285aeb 90%);
+}
+
+.social-icons a.youtube {
+    background: #ff0000;
+}
+
+.social-icons a.shopee {
+    background: #ee4d2d;
+}
+
+/* Hộ kinh doanh */
+.footer-business-inner {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.footer-business-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid var(--yellow);
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.footer-business-info h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 6px;
+}
+
+.footer-business-info ul {
+    list-style: disc;
+    padding-left: 16px;
+    color: #444;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.footer-certified {
+    margin-top: 12px;
+}
+
+.footer-certified img {
+    height: 44px;
+}
+
+/* ── Copyright ── */
+.footer-copyright {
+    border-top: 1px solid #e0e0e0;
+    text-align: center;
+    padding: 14px var(--pad);
+    font-size: 13px;
+    color: #888;
+    background: #f9f9f9;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ------------------------------------------------------- */
+/* MAIN CONTACT */
+/* ------------------------------------------------------- */
+
+.contact-section {
+    background: #fff;
+    padding: 40px 20px;
+}
+
+/* QUAN TRỌNG: căn giữa */
+.contact-container {
+    max-width: 1000px;   
+    margin: 0 auto;      
+}
+
+/* tiêu đề */
+.contact-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--orange);
+    text-align: center;  /* căn giữa tiêu đề */
+}
+
+/* MAP */
+.contact-maps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-maps iframe {
+    width: 100%;
+    height: 260px;
+    border: none;
+    border-radius: 6px;
+}
+
+/* INFO */
+.contact-info {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 6px 0;
+}
+
+/* FORM */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.contact-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.contact-form .note {
+    font-size: 12px;
+    color: #888;
+}
+
+.contact-form button {
+    width: 120px;
+    padding: 10px;
+    border: none;
+    background: var(--yellow);
+    color: #000;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: var(--yellow-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-maps {
+        grid-template-columns: 1fr;
+    }
+}
+
