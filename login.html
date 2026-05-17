@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập Figures</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleMobile.css">
+    <script src="https://kit.fontawesome.com/69ca47d384.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,26 +34,7 @@
 
 
 
-    <script>
-        const btnUser = document.getElementById("btn-user");
-        const menuUser = document.getElementById("user-menu");
-        
-        // click vào icon
-        btnUser.addEventListener("click", function (e) {
-            e.stopPropagation(); // tránh bị đóng ngay
-            menuUser.classList.toggle("show");
-        });
-        
-        // click ra ngoài -> đóng menu
-        document.addEventListener("click", function () {
-            menuUser.classList.remove("show");
-        });
-        
-        // click trong menu không bị đóng
-        menuUser.addEventListener("click", function (e) {
-            e.stopPropagation();
-        });
-        </script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

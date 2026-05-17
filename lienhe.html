@@ -6,16 +6,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liên Hệ</title>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/styleMobile.css">
     <script src="https://kit.fontawesome.com/69ca47d384.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
 
 
+    <!----------------------------------------------------------->
+    <!-- MOBIE -->
+    <!----------------------------------------------------------->
+
+    <!-- Overlay -->
+    <div class="mobile-menu-overlay" id="mobileOverlay" onclick="closeMobileMenu()"></div>
+
+    <!-- Drawer Danh Mục -->
+    <div class="mobile-menu-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <span>Danh Mục</span>
+            <button class="drawer-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul>
+            <li><a href="#">Mô Hình PVC</a></li>
+            <li><a href="#">Scale Figure</a></li>
+            <li><a href="#">Nendoroid</a></li>
+            <li><a href="#">Pop Up Parade</a></li>
+            <li><a href="#">Figma</a></li>
+            <li><a href="#">Mô Hình Resin</a></li>
+            <li><a href="#">Hàng Đặt Trước 2025</a></li>
+            <li><a href="#">Hàng Đặt Trước 2026</a></li>
+            <li><a href="#">Trading Card</a></li>
+            <li><a href="#">Hộp Mika / Tủ Trưng Bày</a></li>
+            <li><a href="#">Plushy / Goods</a></li>
+            <li><a href="#">Flash Sale!!!</a></li>
+            <li><a href="#">Mã Giảm Giá</a></li>
+        </ul>
+    </div>
+
+    <!-- mobile đăng nhập đăng kí khii click -->
+    <div class="mobile-account-dropdown" id="mobileAccountDropdown">
+        <a href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Đăng Nhập</a>
+        <a href="register.html"><i class="fa-solid fa-user-plus"></i> Đăng Ký</a>
+    </div>
+
+    <!-- Bottom Nav -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-house"></i>
+            <span>Trang chủ</span>
+        </a>
+        <a href="#" class="nav-item" data-action="menu">
+            <i class="fa-solid fa-bars"></i>
+            <span>Danh mục</span>
+        </a>
+        <a href="lienhe.html" class="nav-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>Liên hệ</span>
+        </a>
+        <a href="./login.html" class="nav-item">
+            <i class="fa-solid fa-user"></i>
+            <span>Tài khoản</span>
+        </a>
+        <a href="Shoppingcart.html" class="nav-item">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Giỏ hàng</span>
+        </a>
+    </nav>
 
     <!----------------------------------------------------------->
-    <!-- HEADER -->
+    <!-- DESKTOP - HEADER -->
     <!----------------------------------------------------------->
     <header class="header">
 
@@ -270,7 +331,6 @@
     <!------------------------------------------------------------>
     <footer>
 
-        <!-- HÀNG 1: 4 cột link -->
         <div class="footer-main">
 
             <div class="footer-col">
@@ -319,7 +379,6 @@
 
         <hr class="footer-KeNgang">
 
-        <!-- HÀNG 2: Liên hệ + Mạng xã hội + Hộ kinh doanh -->
         <div class="footer-bottom">
 
             <div class="footer-contact">
@@ -375,26 +434,8 @@
 
 
 
-    <script>
-        const btnUser = document.getElementById("btn-user");
-        const menuUser = document.getElementById("user-menu");
 
-        // click vào icon
-        btnUser.addEventListener("click", function (e) {
-            e.stopPropagation(); // tránh bị đóng ngay
-            menuUser.classList.toggle("show");
-        });
-
-        // click ra ngoài -> đóng menu
-        document.addEventListener("click", function () {
-            menuUser.classList.remove("show");
-        });
-
-        // click trong menu không bị đóng
-        menuUser.addEventListener("click", function (e) {
-            e.stopPropagation();
-        });
-    </script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

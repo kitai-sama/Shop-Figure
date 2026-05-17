@@ -225,10 +225,10 @@
     top: 120%;
     right: 0;
     width: 160px;
-    background: #eee; 
+    background: #eee;
     border-radius: 10px;
     border: 1px solid var(--yellow);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
     display: none;
     flex-direction: column;
     overflow: hidden;
@@ -632,8 +632,8 @@ footer {
 
 /* QUAN TRỌNG: căn giữa */
 .contact-container {
-    max-width: 1000px;   
-    margin: 0 auto;      
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* tiêu đề */
@@ -642,7 +642,8 @@ footer {
     font-weight: bold;
     margin-bottom: 20px;
     color: var(--orange);
-    text-align: center;  /* căn giữa tiêu đề */
+    text-align: center;
+    /* căn giữa tiêu đề */
 }
 
 /* MAP */
