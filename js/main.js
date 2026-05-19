@@ -77,3 +77,40 @@ function nextSlide(){
 setInterval(nextSlide, 3000);
 
 
+// <!------------------------------------------------------------>
+// <!-- VIEW - PRODUCT -->
+// <!------------------------------------------------------------>
+
+let currentImages = [];
+let currentIndex = 0;
+
+function openModal(btn){
+    const modal = document.getElementById("productModal");
+
+    const name = btn.dataset.name;
+    const price = btn.dataset.price;
+    const img1 = btn.dataset.img1;
+    const img2 = btn.dataset.img2;
+
+    currentImages = [img1, img2];
+    currentIndex = 0;
+
+    document.getElementById("modal-name").innerText = name;
+    document.getElementById("modal-price").innerText = price;
+    document.getElementById("modal-img").src = currentImages[currentIndex];
+
+    modal.style.display = "flex";
+}
+
+function closeModal(){
+    document.getElementById("productModal").style.display = "none";
+}
+
+function changeSlide(direction){
+    currentIndex += direction;
+
+    if(currentIndex < 0) currentIndex = currentImages.length - 1;
+    if(currentIndex >= currentImages.length) currentIndex = 0;
+
+    document.getElementById("modal-img").src = currentImages[currentIndex];
+}

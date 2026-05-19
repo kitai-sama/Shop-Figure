@@ -271,7 +271,6 @@
         <!-- HOME BANNER -->
         <!------------------------------------------------------------>
 
-
         <section class="home-highlight">
 
             <!-- LEFT: SLIDER -->
@@ -354,20 +353,117 @@
 
         </section>
 
+
+        <!-------------------------------------------------------------->
+        <!-- FEATURED PRODUCT -->
+        <!-------------------------------------------------------------->
+
+        <section class="featured">
+            <div class="container">
+                <div class="featured-list">
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Saikano/Chise.webp" alt="Saikano">
+                            <p>Saikano</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/GITS/figure_GITS.webp" alt="Ghost In The Shell">
+                            <p>Ghost In The Shell</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Hatsune Miku/Miku.webp" alt="Hatsune Miku">
+                            <p>Hatsune Miku</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/NoGameNoLife/Shiro.jpg" alt="No Game No Life">
+                            <p>Shiro</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Fate Series/CutVuongDaiDe.jpg" alt="Fate Series">
+                            <p>Fate Series</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Arknights/Amiya.jpg" alt="Arknights">
+                            <p>Arknights</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Blue Archive/Aliceee.jpg" alt="Blue Archive">
+                            <p>Blue Archive</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Ikaros/Ikaros.jpg" alt="Ikaros">
+                            <p>Ikaros</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Uma Musume/Tokai_Teio.jpg" alt="Uma Musume">
+                            <p>Uma Musume</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/Toaru/Index.jpg" alt="Toaru">
+                            <p>Toaru</p>
+                        </a>
+                    </div>
+
+                    <div class="featured-item">
+                        <a href="">
+                            <img src="./images/featured_Imgs/VTuber/Gawr_Gura.webp" alt="VTuber">
+                            <p>VTuber</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
         <!--------------------------------------------------------->
         <!-- PRODUCT  -->
         <!--------------------------------------------------------->
 
         <section class="product-section">
-
-
             <div class="product-grid">
-
 
                 <div class="product-card">
                     <div class="product-img">
                         <img src="./images/sp1.jpg" alt="">
                         <span class="discount">-7%</span>
+
+                        <div class="product-overlay">
+                            <button class="btn-view" onclick="openModal(this)" data-name="Bomb Chainsaw Man Reze"
+                                data-price="890.000đ" data-img1="./images/sp1.jpg" data-img2="./images/sp2.jpg">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+
                     </div>
                     <div class="product-info">
                         <h4>Tên sản phẩm</h4>
@@ -518,10 +614,6 @@
 
     </main>
 
-
-
-
-
     <!------------------------------------------------------------>
     <!-- FOOTER -->
     <!------------------------------------------------------------>
@@ -626,6 +718,37 @@
         </div>
 
     </footer>
+
+
+    <!------------------------------------------------------------>
+    <!-- VIEW - PRODUCT -->
+    <!------------------------------------------------------------>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+    
+            <span class="close" onclick="closeModal()">×</span>
+    
+            <!-- LEFT -->
+            <div class="modal-left">
+                <button class="nav prev" onclick="changeSlide(-1)"><</button>
+                <img id="modal-img" src="">
+                <button class="nav next" onclick="changeSlide(1)">></button>
+            </div>
+    
+            <!-- RIGHT -->
+            <div class="modal-right">
+                <h2 id="modal-name"></h2>
+                <p class="modal-price" id="modal-price"></p>
+    
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta quibusdam doloribus ipsa, voluptatibus dolores ab consequatur earum consequuntur, inventore alias impedit cum nesciunt aut nulla repellendus! Dolore non praesentium iste?</p>
+    
+                <button class="add-cart">THÊM VÀO GIỎ</button>
+            </div>
+    
+        </div>
+    </div>
+
 
 
 
