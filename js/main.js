@@ -91,13 +91,19 @@ function openModal(btn){
     const price = btn.dataset.price;
     const img1 = btn.dataset.img1;
     const img2 = btn.dataset.img2;
+    const img3 = btn.dataset.img3;
+    const img4 = btn.dataset.img4;
+    const img5 = btn.dataset.img5;
+    const img6 = btn.dataset.img6;
+    const desc = btn.dataset.desc;
 
-    currentImages = [img1, img2];
+    currentImages = [img1, img2, img3, img4, img5].filter(Boolean); 
     currentIndex = 0;
 
     document.getElementById("modal-name").innerText = name;
     document.getElementById("modal-price").innerText = price;
     document.getElementById("modal-img").src = currentImages[currentIndex];
+    document.getElementById("modal-desc").innerText = desc;
 
     modal.style.display = "flex";
 }
