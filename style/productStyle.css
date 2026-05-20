@@ -400,3 +400,9 @@
     margin-top: 30px;
     flex-wrap: wrap;
 }
+
+.buttonNext.active {
+    background: #333;
+    color: #fff;
+    border-color: #333;
+}

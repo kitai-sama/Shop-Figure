@@ -140,3 +140,52 @@ function sortProducts() {
 }
  
 document.addEventListener('DOMContentLoaded', updateCount);
+
+// ----------------------------------------------------
+// PAGINATION 
+// ----------------------------------------------------
+ 
+const ITEMS_PER_PAGE = 12; 
+let currentPage = 1;
+ 
+function goToPage(page) {
+    const grid  = document.getElementById('product-grid');
+    if (!grid) return;
+ 
+    const cards   = Array.from(grid.querySelectorAll('.product-card'));
+    const buttons = document.querySelectorAll('.list-buttonNext .buttonNext');
+    const total   = Math.ceil(cards.length / ITEMS_PER_PAGE);
+
+    if (page < 1) page = 1;
+    if (page > total) page = total;
+    currentPage = page;
+
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const end   = start + ITEMS_PER_PAGE;
+ 
+    cards.forEach((card, i) => {
+        card.style.display = (i >= start && i < end) ? '' : 'none';
+    });
+
+    buttons.forEach((btn, i) => {
+        btn.classList.toggle('active', i + 1 === currentPage);
+    });
+ 
+    const countEl = document.getElementById('product-count');
+    const shown   = cards.slice(start, end).length;
+    if (countEl) countEl.textContent = `Hiển thị ${shown} / ${cards.length} sản phẩm`;
+ 
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+ 
+document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.list-buttonNext .buttonNext');
+ 
+    buttons.forEach((btn, i) => {
+        btn.addEventListener('click', function () {
+            goToPage(i + 1);
+        });
+    });
+
+    goToPage(1);
+});
