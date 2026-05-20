@@ -140,7 +140,7 @@ window.addEventListener('click', function (e) {
 });
 
 // <!------------------------------------------------------------>
-// CHECK NHẬP THÔNG TIN
+// ĐĂNG NHẬP
 // <!------------------------------------------------------------>
 
 function validateForm() {
@@ -190,6 +190,8 @@ function validateForm() {
 
     if (isValid) {
         alert("Đăng nhập thành công");
+        
+        window.location.href = "index.html";
     }
 }
 function togglePw(inputId, btn){
@@ -215,4 +217,60 @@ function togglePw(inputId, btn){
 
 function guestLogin(){
     window.location.href = "index.html";
+}
+
+// <!------------------------------------------------------------>
+// ĐĂNG KÝ
+// <!------------------------------------------------------------>
+
+function validateRegister() {
+
+    let fullname = document.getElementById("fullname").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+    let fullnameError = document.getElementById("fullnameError");
+    let emailError = document.getElementById("emailError");
+    let passwordError = document.getElementById("passwordError");
+    let confirmPasswordError = document.getElementById("confirmPasswordError");
+
+    fullnameError.innerText = "";
+    emailError.innerText = "";
+    passwordError.innerText = "";
+    confirmPasswordError.innerText = "";
+
+    let isValid = true;
+
+    if(fullname === ""){
+        fullnameError.innerText = "Vui lòng nhập họ tên";
+        isValid = false;
+    }
+
+    if(email === ""){
+        emailError.innerText = "Vui lòng nhập email";
+        isValid = false;
+    }
+
+    if(password === ""){
+        passwordError.innerText = "Vui lòng nhập mật khẩu";
+        isValid = false;
+    }
+
+    if(confirmPassword === ""){
+        confirmPasswordError.innerText = "Vui lòng xác nhận mật khẩu";
+        isValid = false;
+    }
+
+    if(password !== confirmPassword){
+        confirmPasswordError.innerText = "Mật khẩu không khớp";
+        isValid = false;
+    }
+
+    if(isValid){
+
+        alert("Đăng ký thành công");
+
+        window.location.href = "login.html";
+    }
 }

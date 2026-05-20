@@ -4,40 +4,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Ký Tài Khoản</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/StyleCart.css"> 
-    <link rel="stylesheet" href="./style/productStyle.css">
+    <link rel="stylesheet" href="./style/LoginRegisterStyle.css">
     <link rel="stylesheet" href="./style/styleMobile.css">
     <script src="https://kit.fontawesome.com/69ca47d384.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
 
+    <!----------------------------------------------------------->
+    <!-- MAIN -->
+    <!----------------------------------------------------------->
 
+    <main class="auth-page">
 
+        <div class="auth-card">
 
+            <div class="auth-header">
+                <a href="index.html" class="logo-link">
+                    <img src="./images/khăn đỏ chibi.jpg" alt="K-Logo">
+                    <span>K-FIGURE</span>
+                </a>
 
+                <h2>Tạo tài khoản mới</h2>
+            </div>
 
+            <div class="auth-body">
 
+                <div class="form-group">
+                    <label for="fullname">Họ và tên *</label>
 
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-user"></i>
 
+                        <input type="text"
+                               id="fullname"
+                               placeholder="Nhập họ và tên">
+                    </div>
 
+                    <div class="error-message"
+                         id="fullnameError"></div>
+                </div>
 
+                <div class="form-group">
+                    <label for="email">Email *</label>
 
+                    <div class="input-wrap">
+                        <i class="fa-solid fa-envelope"></i>
 
+                        <input type="email"
+                               id="email"
+                               placeholder="Nhập email">
+                    </div>
 
+                    <div class="error-message"
+                         id="emailError"></div>
+                </div>
 
+                <div class="form-group">
+                    <label for="password">Mật khẩu *</label>
 
+                    <div class="input-wrap">
 
+                        <i class="fa-solid fa-lock"></i>
 
+                        <input type="password"
+                               id="password"
+                               placeholder="Nhập mật khẩu">
 
+                        <span class="toggle-pw"
+                              onclick="togglePw('password', this)">
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
 
+                    </div>
 
+                    <div class="error-message"
+                         id="passwordError"></div>
+                </div>
 
+                <div class="form-group">
+                    <label for="confirmPassword">
+                        Xác nhận mật khẩu *
+                    </label>
 
+                    <div class="input-wrap">
 
+                        <i class="fa-solid fa-lock"></i>
 
+                        <input type="password"
+                               id="confirmPassword"
+                               placeholder="Nhập lại mật khẩu">
 
+                        <span class="toggle-pw"
+                              onclick="togglePw('confirmPassword', this)">
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
+
+                    </div>
+
+                    <div class="error-message"
+                         id="confirmPasswordError"></div>
+                </div>
+
+                <button class="btn-auth"
+                        onclick="validateRegister()">
+                    <i class="fa-solid fa-user-plus"></i>
+                    ĐĂNG KÝ
+                </button>
+
+                <button class="btn-guest" onclick="guestLogin()">
+                    <i class="fa-solid fa-user"></i>
+                    Đăng nhập với tư cách khách
+                </button>
+
+                <div class="auth-divider">
+                    hoặc đăng ký bằng
+                </div>
+
+                <button class="btn-social btn-google">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                         width="18">
+
+                    Google
+                </button>
+
+                <button class="btn-social btn-facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+                </button>
+
+            </div>
+
+            <div class="auth-footer">
+                Đã có tài khoản?
+                <a href="login.html">
+                    Đăng nhập ngay
+                </a>
+            </div>
+
+        </div>
+
+    </main>
 
     <script src="./js/main.js"></script>
 </body>

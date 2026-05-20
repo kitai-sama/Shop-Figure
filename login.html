@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập Figures</title>
-    <link rel="stylesheet" href="./style/LoginStyle.css">
+    <link rel="stylesheet" href="./style/LoginRegisterStyle.css">
     <link rel="stylesheet" href="./style/styleMobile.css">
     <script src="https://kit.fontawesome.com/69ca47d384.js" crossorigin="anonymous"></script>
 </head>
@@ -30,7 +30,7 @@
             <div class="auth-body">
                 <div class="form-group">
 
-                    <label for="email">Email hoặc Số điện thoại</label>
+                    <label for="email">Email hoặc Số điện thoại *</label>
 
                     <div class="input-wrap">
 
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Mật khẩu</label>
+                    <label for="password">Mật khẩu *</label>
 
                     <div class="input-wrap">
 
@@ -71,10 +71,12 @@
                 <button class="btn-auth" onclick="validateForm()">
                     <i class="fa-solid fa-right-to-bracket"></i> ĐĂNG NHẬP
                 </button>
+
                 <button class="btn-guest" onclick="guestLogin()">
                     <i class="fa-solid fa-user"></i>
                     Đăng nhập với tư cách khách
                 </button>
+
                 <div class="auth-divider">hoặc đăng nhập bằng</div>
 
                 <button class="btn-social btn-google">
