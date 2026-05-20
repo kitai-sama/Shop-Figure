@@ -81,7 +81,6 @@
     <!----------------------------------------------------------->
     <!-- DESKTOP - HEADER -->
     <!----------------------------------------------------------->
-
     <header class="header">
 
         <!-- TẦNG 1: Logo + Search + Hotline + Icons -->
@@ -277,21 +276,17 @@
 
         <div class="cart-wrapper">
 
-            <div class="cart-container">
+            <div class="cart-left">
+                <h2 style="margin-bottom:16px;">Giỏ hàng của bạn</h2>
+                <div id="cart-items"></div>
+            </div>
 
-                <div class="cart-left">
-                    <div id="cart-items"></div>
+            <div class="cart-right">
+                <div class="total-box">
+                    <p>TỔNG</p>
+                    <h2 id="total-price">0đ</h2>
                 </div>
-
-                <div class="cart-right">
-                    <div class="total-box">
-                        <p>TỔNG</p>
-                        <h2 id="total-price">0đ</h2>
-                    </div>
-
-                    <button class="checkout-btn">THANH TOÁN</button>
-                </div>
-
+                <button class="checkout-btn">THANH TOÁN</button>
             </div>
 
         </div>
