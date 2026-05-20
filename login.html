@@ -5,36 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng Nhập Figures</title>
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/StyleCart.css"> 
-    <link rel="stylesheet" href="./style/productStyle.css">
+    <link rel="stylesheet" href="./style/LoginStyle.css">
     <link rel="stylesheet" href="./style/styleMobile.css">
     <script src="https://kit.fontawesome.com/69ca47d384.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    
 
+    <!----------------------------------------------------------->
+    <!-- MAIN -->
+    <!----------------------------------------------------------->
 
+    <main class="auth-page">
+        <div class="auth-card">
 
+            <div class="auth-header">
+                <a href="index.html" class="logo-link">
+                    <img src="./images/khăn đỏ chibi.jpg" alt="K-Logo">
+                    <span>K-FIGURE</span>
+                </a>
+                <h2>Chào mừng bạn trở lại!</h2>
+            </div>
 
+            <div class="auth-body">
+                <div class="form-group">
 
+                    <label for="email">Email hoặc Số điện thoại</label>
 
+                    <div class="input-wrap">
 
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" id="email" placeholder="Nhập email hoặc SĐT">
 
+                    </div>
 
+                    <div class="error-message" id="emailErrorMessage"></div>
 
+                </div>
 
+                <div class="form-group">
+                    <label for="password">Mật khẩu</label>
 
+                    <div class="input-wrap">
 
+                        <i class="fa-solid fa-lock icon-left"></i>
 
+                        <input type="password" id="password" placeholder="Nhập mật khẩu">
 
+                        <span class="toggle-pw" onclick="togglePw('password', this)">
+                            <i class="fa-solid fa-eye"></i>
+                        </span>
 
+                    </div>
 
+                    <div class="error-message" id="passwordErrorMessage"></div>
+                </div>
 
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox" id="remember"> Ghi nhớ đăng nhập
+                    </label>
+                    <a href="#">Quên mật khẩu?</a>
+                </div>
 
+                <button class="btn-auth" onclick="validateForm()">
+                    <i class="fa-solid fa-right-to-bracket"></i> ĐĂNG NHẬP
+                </button>
+                <button class="btn-guest" onclick="guestLogin()">
+                    <i class="fa-solid fa-user"></i>
+                    Đăng nhập với tư cách khách
+                </button>
+                <div class="auth-divider">hoặc đăng nhập bằng</div>
 
+                <button class="btn-social btn-google">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" width="18"
+                        alt="Google"> Google
+                </button>
+                <button class="btn-social btn-facebook">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </button>
+            </div>
 
+            <div class="auth-footer">
+                Chưa có tài khoản? <a href="register.html">Đăng ký ngay</a>
+            </div>
+
+        </div>
+    </main>
 
     <script src="./js/main.js"></script>
 </body>
