@@ -1,0 +1,130 @@
+
+// THÊM VÀO GIỎ HÀNG TỪ MODAL
+function addToCartFromModal() {
+    if (!currentProduct.name) return;
+    addToCart(currentProduct.id, currentProduct.name, currentProduct.price, currentProduct.img);
+}
+ 
+// THÊM VÀO GIỎ HÀNG
+function addToCart(id, name, price, img) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let productIndex = cart.findIndex(item => item.id === id);
+
+    if (productIndex !== -1) {
+        cart[productIndex].quantity += 1;
+    } else {
+        cart.push({
+            id: id,
+            name: name,
+            price: price,
+            img: img,
+            quantity: 1
+        });
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert('Đã thêm sản phẩm vào giỏ hàng thành công!');
+}
+
+function loadCart() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let container = document.getElementById("cart-items");
+    let total = 0;
+
+    if (!container) return; 
+
+    container.innerHTML = "";
+
+    cart.forEach((item, index) => {
+        let priceNumber = parseInt(item.price.replace(/\D/g, ""));
+        let itemTotal = priceNumber * item.quantity;
+        total += itemTotal;
+
+        container.innerHTML += `
+        <div class="cart-item">
+            <img src="${item.img}" class="cart-img">
+
+            <div class="cart-info">
+                <h4>${item.name}</h4>
+                <p class="price">${item.price}</p>
+
+                <div class="quantity">
+                    <button onclick="changeQty(${index}, -1)">-</button>
+                    <span>${item.quantity}</span>
+                    <button onclick="changeQty(${index}, 1)">+</button>
+                </div>
+            </div>
+
+            <div class="cart-right-item">
+                <p class="item-total">${itemTotal.toLocaleString()}đ</p>
+                <button class="delete-btn" onclick="removeItem(${index})">Xoá</button>
+            </div>
+        </div>
+        `;
+    });
+
+    let totalBox = document.getElementById("total-price");
+    if (totalBox) {
+        totalBox.innerText = total.toLocaleString() + "đ";
+    }
+}
+
+function changeQty(index, change) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart[index].quantity += change;
+
+    if (cart[index].quantity <= 0) {
+        cart.splice(index, 1);
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+}
+
+function removeItem(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    loadCart();
+}
+
+document.addEventListener("DOMContentLoaded", loadCart);
+
+
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let count = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    let cartIcon = document.querySelector(".cart-count");
+    if (cartIcon) cartIcon.innerText = count;
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    loadCart();
+    updateCartCount();
+});
+
+// Đếm sản phẩm
+ function updateCount() {
+    const cards = document.querySelectorAll('#product-grid .product-card');
+    document.getElementById('product-count').textContent = `Hiển thị ${cards.length} sản phẩm`;
+}
+
+// Sắp xếp sản phẩm
+function sortProducts() {
+    const grid = document.getElementById('product-grid');
+    const cards = Array.from(grid.querySelectorAll('.product-card'));
+    const val = document.getElementById('sort-select').value;
+
+    cards.sort((a, b) => {
+        if (val === 'asc') return +a.dataset.price - +b.dataset.price;
+        if (val === 'desc') return +b.dataset.price - +a.dataset.price;
+        if (val === 'name') return a.dataset.name.localeCompare(b.dataset.name, 'vi');
+        return 0;
+    });
+
+    cards.forEach(c => grid.appendChild(c));
+}
+
+document.addEventListener('DOMContentLoaded', updateCount);
