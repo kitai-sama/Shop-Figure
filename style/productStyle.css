@@ -200,32 +200,6 @@
     color: gray;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .home-highlight {
-        grid-template-columns: 1fr;
-    }
-
-    .slides {
-        height: 220px;
-    }
-
-    .containner-banner {
-        padding: 15px 10px;
-    }
-
-    .featured-list {
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 10px;
-    }
-
-    .featured-item {
-        scroll-snap-align: start;
-    }
-}
-
-
 /* <!--------------------------------------------------------------> */
 /* <!-- FEATURED PRODUCT --> */
 /* <!--------------------------------------------------------------> */
@@ -380,4 +354,12 @@
     cursor: pointer;
     text-decoration: none;
     background-color: #5d5a5a;
+}
+
+.cart-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }

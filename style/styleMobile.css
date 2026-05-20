@@ -202,4 +202,40 @@
         background: #fff8e0;
         color: var(--orange);
     }
+
+    .contact-maps {
+        grid-template-columns: 1fr;
+    }
+
+    .home-highlight {
+        grid-template-columns: 1fr;
+    }
+
+    .slides {
+        height: 220px;
+    }
+
+    .containner-banner {
+        padding: 15px 10px;
+    }
+
+    .featured-list {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
+
+    .featured-item {
+        scroll-snap-align: start;
+    }
+}
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        grid-template-columns: 1fr;
+    }
 }

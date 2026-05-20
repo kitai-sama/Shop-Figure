@@ -256,7 +256,7 @@
 
 
 /* ------------------------------------------------------- */
-/* NAV MENU (tầng vàng) */
+/* NAV MENU  */
 /* ------------------------------------------------------- */
 nav {
     display: flex;
@@ -610,17 +610,6 @@ footer {
     background: #f9f9f9;
 }
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-    .footer-main {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .footer-bottom {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* ------------------------------------------------------- */
 /* MAIN CONTACT */
 /* ------------------------------------------------------- */
@@ -712,10 +701,5 @@ footer {
     background: var(--yellow-dark);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .contact-maps {
-        grid-template-columns: 1fr;
-    }
-}
+
 
