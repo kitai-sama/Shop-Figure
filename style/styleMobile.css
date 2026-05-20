@@ -9,7 +9,9 @@
     display: none;
 }
 
-
+.body {
+    background-color: #fff8d0;
+}
 
 @media (max-width: 768px) {
 
