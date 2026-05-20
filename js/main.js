@@ -65,11 +65,11 @@ function closeMobileMenu() {
 const slides = document.querySelectorAll(".slide");
 let current = 0;
 
-function nextSlide(){
+function nextSlide() {
     slides[current].classList.remove("active");
 
     current++;
-    if(current >= slides.length) current = 0;
+    if (current >= slides.length) current = 0;
 
     slides[current].classList.add("active");
 }
@@ -84,7 +84,7 @@ setInterval(nextSlide, 3000);
 let currentImages = [];
 let currentIndex = 0;
 
-function openModal(btn){
+function openModal(btn) {
     const modal = document.getElementById("productModal");
 
     const name = btn.dataset.name;
@@ -97,7 +97,7 @@ function openModal(btn){
     const img6 = btn.dataset.img6;
     const desc = btn.dataset.desc;
 
-    currentImages = [img1, img2, img3, img4, img5].filter(Boolean); 
+    currentImages = [img1, img2, img3, img4, img5, img6].filter(Boolean);
     currentIndex = 0;
 
     document.getElementById("modal-name").innerText = name;
@@ -108,15 +108,24 @@ function openModal(btn){
     modal.style.display = "flex";
 }
 
-function closeModal(){
+function closeModal() {
     document.getElementById("productModal").style.display = "none";
 }
 
-function changeSlide(direction){
+function changeSlide(direction) {
     currentIndex += direction;
 
-    if(currentIndex < 0) currentIndex = currentImages.length - 1;
-    if(currentIndex >= currentImages.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = currentImages.length - 1;
+    if (currentIndex >= currentImages.length) currentIndex = 0;
 
     document.getElementById("modal-img").src = currentImages[currentIndex];
 }
+
+window.addEventListener('click', function (e) {
+    const modal = document.getElementById("productModal");
+    const modalContent = document.querySelector(".modal-content");
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+

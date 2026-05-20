@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ Hàng</title>
+    <title>Sản Phẩm</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/styleMobile.css">
     <script src="https://kit.fontawesome.com/69ca47d384.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style/productStyle.css">
-
 </head>
 
 <body>
@@ -280,6 +279,13 @@
 
 
 
+
+
+
+
+
+
+
     <!------------------------------------------------------------>
     <!-- FOOTER -->
     <!------------------------------------------------------------>
@@ -384,6 +390,36 @@
         </div>
 
     </footer>
+
+    <!------------------------------------------------------------>
+    <!-- VIEW - PRODUCT -->
+    <!------------------------------------------------------------>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">x</span>
+
+            <!-- LEFT -->
+            <div class="modal-left">
+                <button class="nav prev" onclick="changeSlide(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+                <img id="modal-img" src="">
+                <button class="nav next" onclick="changeSlide(1)"><i class="fa-solid fa-arrow-right"></i></button>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="modal-right">
+                <h2 id="modal-name"></h2>
+                <p class="modal-price" id="modal-price"></p>
+
+                <div class="modal-desc" id="modal-desc"></div>
+
+                <button class="add-cart">THÊM VÀO GIỎ HÀNG</button>
+            </div>
+
+        </div>
+    </div>
 
     <script src="./js/main.js"></script>
 </body>
